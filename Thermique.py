@@ -56,7 +56,7 @@ totalDT = [ [Tref - T[m][i] for i in range(len(T[0])-1)] for m in range(len(T))]
 
 print("########### Enregistrement dans un fichier #############")
 
-'''
+
 with open("save_thermique.csv", "w") as f:
 
     for i in range(len(totalDT)):
@@ -66,8 +66,10 @@ with open("save_thermique.csv", "w") as f:
         f.write("\n")
 
     f.close()
-'''
 
+
+with open("save_thermique.npy", "wb") as f:
+    save(f, totalDT)
 
 
 
